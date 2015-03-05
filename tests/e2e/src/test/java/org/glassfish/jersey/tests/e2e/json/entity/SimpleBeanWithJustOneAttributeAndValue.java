@@ -67,7 +67,7 @@ public class SimpleBeanWithJustOneAttributeAndValue {
         SimpleBeanWithJustOneAttributeAndValue instance = new SimpleBeanWithJustOneAttributeAndValue();
 
         try {
-            instance.uri = new URI("http://localhost:8080/jedna/bedna/");
+            instance.uri = new URI("http://localhost:9998/jedna/bedna/");
             instance.value = "characters";
         } catch (URISyntaxException ex) {
             Logger.getLogger(SimpleBeanWithJustOneAttributeAndValue.class.getName()).log(Level.SEVERE, null, ex);

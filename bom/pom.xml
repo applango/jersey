@@ -53,11 +53,26 @@
 
     <groupId>org.glassfish.jersey</groupId>
     <artifactId>jersey-bom</artifactId>
-    <version>2.16</version>
+    <version>2.16.1</version>
     <packaging>pom</packaging>
     <name>jersey-bom</name>
 
     <description>Jersey Bill of Materials (BOM)</description>
+
+    <!--distributionManagement /-->
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>applangoart</id>
+            <name>applangoart-snapshots</name>
+            <url>http://localhost:8081/artifactory/ext-snapshot-local</url>
+        </snapshotRepository>
+        <repository>
+            <id>applangoart</id>
+            <name>applangoart</name>
+            <url>http://localhost:8081/artifactory/ext-release-local</url>
+        </repository>
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -396,6 +411,6 @@
     </profiles>
 
   <scm>
-    <tag>2.16</tag>
+    <tag>2.16.1</tag>
   </scm>
 </project>

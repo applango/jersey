@@ -46,12 +46,12 @@ import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 /**
- * Application class to start performance test web service at http://localhost:8080/ if the base URI
+ * Application class to start performance test web service at http://localhost:9998/ if the base URI
  * is not passed via the first command line argument.
  */
 public class JerseyApp {
 
-    private static final URI BASE_URI = URI.create("http://localhost:8080/");
+    private static final URI BASE_URI = URI.create("http://localhost:9998/");
     public static final String ROOT_PATH = "text";
 
     public static void main(String[] args) throws Exception {

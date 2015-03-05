@@ -92,7 +92,7 @@ public class TestDataGeneratorApp {
     public static final String ENTITY_SEPARATOR = "\n\n";
 
     private static final Logger LOG = Logger.getLogger(TestDataGeneratorApp.class.getName());
-    private static final URI BASE_URI = URI.create("http://localhost:8080/");
+    private static final URI BASE_URI = URI.create("http://localhost:9998/");
     private static URI baseUri;
 
     public static void main(final String[] args) throws Exception {

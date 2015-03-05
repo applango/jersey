@@ -85,7 +85,7 @@ import com.yammer.metrics.core.TimerContext;
 public class JerseyApp {
 
     public static final Person PERSON_FROM_FILE = new Person("Custom", 1, "V Parku");
-    private static final URI BASE_URI = URI.create("http://localhost:8080/");
+    private static final URI BASE_URI = URI.create("http://localhost:9998/");
     public static final String ROOT_PATH = "person";
     private static final Logger LOGGER = Logger.getLogger(JerseyApp.class.getName());
 
@@ -147,7 +147,7 @@ public class JerseyApp {
         Options options = new Options();
         options.addOption(new Option("t", "type", true, "media type; mandatory (for example: \"application/json\"). Now supports application/json,application/xml,text/plain."));
         options.addOption(new Option("n", "name", true, "defines group name of Metric exposed by JMX MBeans; optional (default valeue JerseyPerformanceTests)."));
-        options.addOption(new Option("u", "uri", true, "base uri; optional (for example: \"http://localhost:8080/\"). Default value is standard JerseyTest base uri."));
+        options.addOption(new Option("u", "uri", true, "base uri; optional (for example: \"http://localhost:9998/\"). Default value is standard JerseyTest base uri."));
         options.addOption(new Option("p", "provider", true, "provider full class; optional (for example \"org.glassfish.jersey.moxy.json.MoxyJsonFeature\")"));
         options.addOption(new Option("f", "file", true, "file with content that should be returned from the GET method; optional (for example \"input.xml\")"));
         options.addOption(new Option("j", "junit", false, "use this flag if the application is run in the junit test mode. In this mode the server is started but the thread is not blocked in the main method."));

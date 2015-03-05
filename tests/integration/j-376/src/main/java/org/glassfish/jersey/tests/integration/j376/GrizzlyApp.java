@@ -59,7 +59,7 @@ public class GrizzlyApp {
     private static Weld weld;
     private static HttpServer server;
 
-    private static final URI BASE_URI = URI.create("http://localhost:8080/j376/");
+    private static final URI BASE_URI = URI.create("http://localhost:9998/j376/");
 
     public static void main(String[] args) {
         try {

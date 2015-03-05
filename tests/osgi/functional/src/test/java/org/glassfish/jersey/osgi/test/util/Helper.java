@@ -66,7 +66,7 @@ public class Helper {
     /**
      * Jersey HTTP port.
      */
-    private static final int port = getEnvVariable(TestProperties.CONTAINER_PORT, 8080);
+    private static final int port = getEnvVariable(TestProperties.CONTAINER_PORT, 9998);
 
     /**
      * Returns an integer value of given system property, or a default value

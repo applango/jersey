@@ -73,7 +73,7 @@ public class SimpleBeanWithAttributes {
         instance.j = "bumper";
 
         try {
-            instance.uri = new URI("http://localhost:8080/jedna/bedna/");
+            instance.uri = new URI("http://localhost:9998/jedna/bedna/");
         } catch (URISyntaxException ex) {
             Logger.getLogger(SimpleBeanWithAttributes.class.getName()).log(Level.SEVERE, null, ex);
         }

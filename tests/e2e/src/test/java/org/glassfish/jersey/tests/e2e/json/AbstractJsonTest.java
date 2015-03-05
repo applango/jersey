@@ -57,6 +57,9 @@ import javax.ws.rs.ext.Provider;
 
 import javax.xml.bind.JAXBContext;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.internal.util.PropertiesHelper;
 import org.glassfish.jersey.jettison.JettisonConfig;
@@ -71,6 +74,7 @@ import org.glassfish.jersey.test.TestProperties;
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 /**
@@ -192,8 +196,11 @@ public abstract class AbstractJsonTest extends JerseyTest {
                                     retrievedJson = retrievedJson.replace("ns2", "ns0");
                                 }
                             }
-
-                            assertEquals(json, retrievedJson);
+                            ObjectMapper mapper = new ObjectMapper();
+                            JsonNode n1 = mapper.readTree(json);
+                            JsonNode n2 = mapper.readTree(retrievedJson);
+                            assertTrue(n1.equals(n2));
+                            // assertEquals(json, retrievedJson);
                         } catch (final IOException e) {
                             fail("Cannot find original JSON file.");
                         }
